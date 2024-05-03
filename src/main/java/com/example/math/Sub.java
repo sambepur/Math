@@ -34,7 +34,7 @@ public class Sub{
         count.setOnAction(new EventHandler<ActionEvent>() {@Override public void handle(ActionEvent event) {SubC();HISTORY.add(arg1.getText()+"-"+arg2.getText());}});
         clear.setOnAction(new EventHandler<ActionEvent>() {@Override public void handle(ActionEvent actionEvent) {Clear(arg1, arg2, ans);}});
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Multiplication");
+        primaryStage.setTitle("Subtraction");
         primaryStage.show();
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {@Override public void handle(WindowEvent windowEvent) {CalculateApp.setMain();}});
     }

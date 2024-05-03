@@ -2,13 +2,11 @@ package com.example.math;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Orientation;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -31,7 +29,8 @@ public class Summa{
         Scene scene = new Scene(root, 400, 250);
 
         convert(arg1,name1, arg2, name2, ans, count, clear);
-        count.setOnAction(new EventHandler<ActionEvent>() {@Override public void handle(ActionEvent event) {Summ();HISTORY.add(arg1.getText()+"+"+arg2.getText());}});
+        count.setOnAction(new EventHandler<ActionEvent>() {@Override public void handle(ActionEvent event) {
+            Summer();HISTORY.add(arg1.getText()+"+"+arg2.getText());}});
         clear.setOnAction(new EventHandler<ActionEvent>() {@Override public void handle(ActionEvent actionEvent) {Clear(arg1, arg2, ans);}});
         primaryStage.setScene(scene);
         primaryStage.setTitle("Sum");
@@ -39,7 +38,7 @@ public class Summa{
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {@Override public void handle(WindowEvent windowEvent) {CalculateApp.setMain();}});
     }
 
-    protected static void Summ(){
+    protected static void Summer(){
         if (Objects.equals(arg1.getText(), "") || Objects.equals(arg2.getText(), "")){
             ans.setText("Empty arg");
         }

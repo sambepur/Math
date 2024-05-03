@@ -28,11 +28,11 @@ public class CalculateApp  extends Application {
     static void setMain(){
         AnchorPane root = new AnchorPane(sum, division, multiplication, subtraction, history);
         Scene scene = new Scene(root, 400, 250);
-        sum.setOnAction(new EventHandler<ActionEvent>(){@Override public void handle(ActionEvent actionEvent) {Summa.setSum(); primaryStage.close();}});
-        division.setOnAction(new EventHandler<ActionEvent>() {@Override public void handle(ActionEvent actionEvent) {Division.setDiv(); primaryStage.close();}});
-        multiplication.setOnAction(new EventHandler<ActionEvent>() {@Override public void handle(ActionEvent actionEvent) {Mult.setMult(); primaryStage.close();}});
-        subtraction.setOnAction(new EventHandler<ActionEvent>() {@Override public void handle(ActionEvent actionEvent) {Sub.setSub();primaryStage.close();}});
-        history.setOnAction(new EventHandler<ActionEvent>() {@Override public void handle(ActionEvent actionEvent) {History.showHistory();}});
+        sum.setOnAction(actionEvent -> {Summa.setSum(); primaryStage.close();});
+        division.setOnAction(actionEvent -> {Division.setDiv(); primaryStage.close();});
+        multiplication.setOnAction(actionEvent -> {Mult.setMult(); primaryStage.close();});
+        subtraction.setOnAction(actionEvent -> {Sub.setSub();primaryStage.close();});
+        history.setOnAction(actionEvent -> History.showHistory());
         convertMain();
         primaryStage.setScene(scene);
         primaryStage.setTitle("Calculator");
